@@ -13,7 +13,6 @@ lightning_logs
 .DS_Store
 build
 *.egg-info
-*.ckpt
 notebooks
 *.log
 examples/datasets/MNIST/*
