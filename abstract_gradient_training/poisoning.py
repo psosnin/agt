@@ -54,7 +54,7 @@ def poison_certified_training(
     device = torch.device(config.device)
     model = model.to(device)  # match the device of the model and data
     param_l, param_n, param_u = model_utils.get_parameters(model)
-    k_poison = max(config.k_poison, config.label_k_poison)
+    k_poison = config.k_poison + config.label_k_poison
     optimizer = optimizers.SGD(config)
 
     # set up logging and print run info
